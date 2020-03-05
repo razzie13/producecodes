@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ACCA74" />
+    <title>Produce Code Search | gregrasmussen.com</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body onload="addDataFromLocalStorage()">
+    <header>
+        Produce Code Search
+    </header>
+
+    <main id="main">
+        <div id="search-form">
+            <input id="produce-input" placeholder="search by name or code" onfocus="this.value=''"/>
+            <br>
+            <button id="button-findname" onclick="testCode()">Find Name</button>
+            <button id="button-findcode" onclick="testName()">Find Code</button>
+        </div>
+
+        <div id="search-result">
+            <p id="result"></p>
+        </div>
+    
+
+    <button id="button-addtolist" class="hidden" onclick="addToList()">Add To Code List</button>
+    <button id="button-showlist" class="hidden">Display Code List</button>
+    
+    <div id="blurb"><p>Search items using plurals (ex: raspberries) or full names (green seedless grapes) when typing text.</p></div>
+    <div id="caution"><p>Only click "Display Code List" once you are done adding to the list. Closing the list will delete the data.</p></div>
+
+    </main>
+
+    <footer id="copyright">
+        <p>Copyright 2020 <a href="http://gregrasmussen.com" target="blank" style="color: white; letter-spacing: 1px; font-weight: bold;">Greg Rasmussen</a></p>
+    </footer>
+
+<!-------------------------------------- GLOBAL VARIABLES -------------------------------------------> 
+<script src="scripts/variables-global.js"></script>
+
+<!-------------------------------------- ADD DATA FROM LOCAL STORAGE -------------------------------->    
+<script src="scripts/function-adddatafromlocalstorage.js"></script>
+
+<!-------------------------------------- PLU CODES -------------------------------------------------->    
+<script src="scripts/plucodes-produce.js"></script>
+
+<!-------------------------------------- JS FUNCTIONS -----------------------------------------------> 
+<!------------- find name from code ------------------>
+<script src="scripts/function-testcode.js"></script>
+
+<!------------- find code from name ------------------>
+<script src="scripts/function-testname.js"></script>
+
+<!------------- add plu codes to end user list ------->
+<script src="scripts/function-addtolist.js"></script>
+
+<!------------- show "add to list" button ------------>
+<script src="scripts/function-showaddtolistbutton.js"></script>
+
+<!------------- show PLUs in modal ------------------->
+<script src="scripts/function-showplulist.js"></script>
+
+<!------------- remove PLU list modal ---------------->
+<script src="scripts/function-removePluList.js"></script>
+
+<!------------- copy PLU list to clipboard ----------->
+<script src="scripts/function-copylisttext.js"></script>
+
+<!------------- app.js file -------------------------->
+<script src="scripts/app.js"></script>
+
+<!-------------------------------------- ASSORTED AND TEST JS -------------------------------------------> 
+
+<script>
+
+
+
+
+
+    //-------------------- hit enter to click --------------
+/*
+var input = document.getElementById("produce-input");    
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13)   {
+        document.getElementById("button-findname").click();
+    }
+});
+*/
+</script>
+</body>
+</html>
